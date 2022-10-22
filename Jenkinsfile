@@ -6,12 +6,15 @@ pipeline {
 
   environment {
     NEWRELIC_API_KEY = credentials('ansible')
+    SAMPLE_URL = "google.com"
   }
+
   stages {
 
     stage('Foo') {
       steps {
         echo 'Hello world'
+        echo 'Bye'
       }
     }
 
@@ -28,5 +31,5 @@ pipeline {
       echo 'I will always say Hello again!'
     }
   }
-  
+
 }
